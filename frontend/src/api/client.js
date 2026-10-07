@@ -7,6 +7,7 @@ const client = axios.create({
 });
 
 let unauthorizedHandler = null;
+
 export const setUnauthorizedHandler = (fn) => {
   unauthorizedHandler = fn;
 };
@@ -18,7 +19,11 @@ client.interceptors.response.use(
     const status = error.response?.status;
     const url = error.config?.url || "";
     const isAuthCall = /\/auth\/(login|register|me)/.test(url);
-    if (status === 401 && !isAuthCall && unauthorizedHandler) unauthorizedHandler();
+
+    if (status === 401 && !isAuthCall && unauthorizedHandler) {
+      unauthorizedHandler();
+    }
+
     return Promise.reject(error);
   }
 );
