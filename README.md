@@ -1,6 +1,11 @@
 # AI Expense Tracker
+<img width="1911" height="915" alt="Screenshot 2026-10-07 173726" src="https://github.com/user-attachments/assets/50fcecb5-54a0-44d3-84ee-1c71717fdb9c" />
+
 
 A full-stack personal finance app: record income and expenses, set budgets, schedule recurring payments, see analytics, export reports, and let AI help you enter and understand your spending.
+
+<img width="1915" height="922" alt="Screenshot 2026-10-07 173941" src="https://github.com/user-attachments/assets/11eae962-0f7a-4435-98d6-91800f36033e" />
+
 
 Built with **React (Vite)**, **Node.js + Express**, and **MongoDB (Mongoose)**. JavaScript only (no TypeScript, no Tailwind). Every React component has its own `.jsx` and its own `.css` file so problems are easy to isolate.
 
@@ -36,12 +41,18 @@ Built with **React (Vite)**, **Node.js + Express**, and **MongoDB (Mongoose)**. 
 ## 1. Features
 
 ### Accounts and authentication
+
+<img width="1911" height="915" alt="Screenshot 2026-10-07 173726" src="https://github.com/user-attachments/assets/6ea093b6-eb9e-4539-8e8d-29c74b5c8291" />
+
 - Register with name, email, password and confirm password; log in with email and password; log out.
 - Passwords are hashed with bcrypt. Sessions use a JWT stored in an **httpOnly cookie** (JavaScript in the page cannot read it).
 - Protected routes on both the API and the frontend. Visiting a protected page while logged out redirects to the login page and returns you to where you were after login.
 - Each user can only ever see and change their own data.
 
 ### Transactions
+
+<img width="1887" height="917" alt="image" src="https://github.com/user-attachments/assets/576e31e9-2fa4-4532-943b-315c5b601a32" />
+
 - Income and expense records with: type, amount, category, date, description, payment method, notes.
 - Create, view, edit and delete, with validation on both the frontend and the backend.
 - Transaction history table with **search** (description, notes, category), **filters** (type, category, payment method, date range, amount range), **sorting** (date, amount, category), and **pagination** (10 per page).
@@ -50,37 +61,58 @@ Built with **React (Vite)**, **Node.js + Express**, and **MongoDB (Mongoose)**. 
 - On small screens the table turns into stacked cards.
 
 ### Categories
+
+<img width="1891" height="910" alt="image" src="https://github.com/user-attachments/assets/aa8f910f-c094-4017-96cb-3b3aedf766d4" />
+
 - Default **expense** categories: Food, Shopping, Transport, Rent, Bills, Health, Education, Entertainment, Travel, Other.
 - Default **income** categories: Salary, Freelance, Business, Investment, Gift, Other.
 - Create, rename, recolor and delete your own categories. Renaming updates all transactions, budgets and recurring items that use it. Deleting moves its transactions to "Other".
 
 ### Budgets
+
+<img width="1917" height="917" alt="image" src="https://github.com/user-attachments/assets/41a8dd21-16d4-4c16-a892-96f455d36c9c" />
+
 - Monthly budget per expense category (for example Food: 7,000 for October 2026).
 - Shows budget amount, amount spent, remaining, percentage used and a colour-coded progress bar.
 - Warnings at **75%**, **90%** and when **exceeded**, shown on the card and as notifications.
 - Invalid values (zero, negative, non-numeric, duplicates for the same category and month) are rejected.
 
 ### Recurring transactions
+
+<img width="1912" height="915" alt="image" src="https://github.com/user-attachments/assets/b081e466-178e-4f4b-8e9a-d5cb440f4902" />
+
 - Rent, salary, subscriptions, EMIs, internet, electricity, insurance, or anything else.
 - Fields: name, amount, category, type, frequency (daily, weekly, monthly, yearly), start date, next date, end date.
 - Due occurrences are created automatically (by a daily scheduler and also when you use the app).
 - Pause and resume, edit, delete. Upcoming ones appear on the dashboard.
 
 ### Analytics
+
+<img width="1910" height="917" alt="image" src="https://github.com/user-attachments/assets/68171c4b-1f6d-493c-b367-7ee8826ccdd5" />
+
 - Income vs expenses, expenses by category, monthly spending trend, daily spending, payment-method distribution, savings trend.
 - **Monthly**, **yearly** and **custom date range** views.
 - Plain-language summaries, for example "Your expenses increased by 18% compared with last month."
 
 ### Reports
+
+<img width="1917" height="922" alt="image" src="https://github.com/user-attachments/assets/3ad29e85-734d-4431-860a-921d8870137f" />
+
 - Monthly, yearly, category, income and expense reports.
 - On-screen preview, then export to **CSV** or **PDF**.
 
 ### Notifications
+
+<img width="1906" height="917" alt="image" src="https://github.com/user-attachments/assets/791c4c1f-6f36-455b-8267-89d930f56e8b" />
+
 - Budget approaching its limit (75% and 90%), budget exceeded, upcoming recurring payment, unusually large expense, and a monthly summary.
 - Bell icon with an unread count in the top bar; full list page with mark-as-read, mark-all-as-read and delete.
 - Each alert type can be switched off in Settings.
 
 ### Profile and settings
+
+<img width="1917" height="925" alt="image" src="https://github.com/user-attachments/assets/24d67660-b43e-4579-8002-a33d7f778c76" />
+
 - Profile: name, email, profile picture, currency, monthly income.
 - Settings: currency, light/dark theme, notification preferences, change password.
 
@@ -92,6 +124,9 @@ Built with **React (Vite)**, **Node.js + Express**, and **MongoDB (Mongoose)**. 
 - AI output is clearly labelled. Without an API key, built-in rules are used instead.
 
 ### UI and experience
+
+<img width="1908" height="912" alt="Screenshot 2026-10-07 173955" src="https://github.com/user-attachments/assets/4abf1fdf-ab2d-4938-a8eb-845847724a50" />
+
 - Modern, responsive layout (sidebar on desktop, drawer on mobile), light and dark mode.
 - Skeleton loaders on every data-dependent page, empty states, toast notifications, confirmation dialogs, friendly error messages.
 - Accessible controls: labels, focus outlines, keyboard-closable dialogs, ARIA attributes, reduced-motion support.
@@ -111,9 +146,7 @@ Built with **React (Vite)**, **Node.js + Express**, and **MongoDB (Mongoose)**. 
 | Validation | `zod` (request bodies and query strings) |
 | Security | `helmet`, `cors`, `express-rate-limit`, `express-mongo-sanitize` |
 | Files and reports | `multer` (avatar upload), `pdfkit` (PDF), hand-written CSV |
-| Scheduling | `node-cron` |
-| AI | Anthropic Messages API through a replaceable provider layer, with a rule-based fallback |
-| Tooling | ESLint (backend and frontend), `node --watch` for backend dev |
+
 
 ---
 
@@ -141,14 +174,6 @@ MongoDB (Atlas or local) through Mongoose
 4. The controller confirms the category belongs to that user, saves the transaction with that user's id.
 5. `alertService` checks the matching budget (75/90/100%) and unusual-expense rule, creating notifications if needed.
 6. The response uses the standard envelope `{ success, message, data }`.
-
-**Design decisions**
-- **Data isolation:** every query includes `userId` taken from the verified token, never from the request body or URL.
-- **Dates are UTC calendar days.** A date such as 5 Oct is stored as `2026-10-05T00:00:00Z` and displayed in UTC, so it never shifts by a day between time zones.
-- **AI insights use real numbers.** All figures come from MongoDB aggregations; the model only writes the wording and is told never to invent numbers.
-- **Graceful fallback.** No API key, or a failed AI call, falls back to rule-based parsing and insights; the app never breaks because AI is unavailable.
-- **Recurring transactions are claimed atomically** (`findOneAndUpdate` on the exact `nextDate`), so the cron job and a page load can never create the same transaction twice.
-- **Categories are referenced by name** (stored on transactions, budgets, recurring items). Renaming and deleting a category updates those references.
 
 ---
 
@@ -230,8 +255,8 @@ expense-tracker/
 |---|---|---|
 | Node.js | 18 or newer (20+ recommended) | `node -v` |
 | npm | comes with Node | `npm -v` |
-| MongoDB | Atlas free cluster **or** local MongoDB Community Server | see section 7 |
-| (Optional) Anthropic API key | for real AI results | https://console.anthropic.com |
+| MongoDB | Atlas free cluster 
+
 
 `node --watch` (used by `npm run dev` in the backend) needs Node 18.11 or newer.
 
@@ -260,7 +285,7 @@ copy .env.example .env
 # Windows (PowerShell)
 Copy-Item .env.example .env
 ```
-Open `backend/.env` and fill in `MONGO_URI` and `JWT_SECRET` (see section 8). Generate a secret with:
+Open `backend/.env` and fill in `MONGO_URI` and `JWT_SECRET`  Generate a secret with:
 ```bash
 node -e "console.log(require('crypto').randomBytes(48).toString('hex'))"
 ```
@@ -272,10 +297,10 @@ npm install
 ```
 
 ### Step 4: make sure MongoDB is reachable
-Follow section 7. For Atlas, the most common problem is forgetting to allow your IP address.
+ For Atlas, the most common problem is forgetting to allow your IP address.
 
 ### Step 5: run both servers
-Open **two terminals** (see section 9).
+Open **two terminals**
 
 ---
 
@@ -315,19 +340,7 @@ Things to remember:
 
 ## 8. Environment variables
 
-All backend variables live in `backend/.env`. **Never commit this file** (it is in `.gitignore`).
 
-| Variable | Required | Default | Description |
-|---|---|---|---|
-| `MONGO_URI` | **Yes** | none | MongoDB connection string, including the database name. The server exits with a clear message if missing. |
-| `JWT_SECRET` | **Yes in production** | random (dev only) | Secret used to sign login tokens. In development, if empty, a temporary secret is generated and a warning is printed (you get logged out on every restart). In production the server refuses to start without it. |
-| `JWT_EXPIRES_IN` | No | `7d` | Token lifetime (the cookie lasts 7 days). |
-| `PORT` | No | `5000` | API port. If you change it, also change the proxy target in `frontend/vite.config.js`. |
-| `NODE_ENV` | No | `development` | Set to `production` when deploying (enables Secure cookies, hides error details, trusts the proxy). |
-| `CLIENT_URL` | No | `http://localhost:5173` | The one origin allowed by CORS. |
-| `COOKIE_SAMESITE` | No | `lax` | `lax`, `strict` or `none`. `none` forces the Secure flag and needs HTTPS. |
-| `AI_API_KEY` | No | empty | Anthropic API key. Empty means the rule-based fallback is used. `ANTHROPIC_API_KEY` is also accepted. |
-| `AI_MODEL` | No | `claude-haiku-4-5-20251001` | Model used for AI features. |
 
 The frontend has **no environment variables**. It calls the relative URL `/api`, which Vite proxies to the backend in development.
 
@@ -704,47 +717,6 @@ curl -b cookies.txt -H "Content-Type: application/json" \
 
 ---
 
-## 14. AI features in detail
-
-### Provider layer
-`backend/services/ai/index.js` returns the active provider (or `null` when no key is set). A provider is any object with:
-```js
-{ name: "claude", async complete({ system, prompt, maxTokens }) { /* returns a string */ } }
-```
-To switch vendor, add a file next to `claudeProvider.js` with that shape and return it from `index.js`. Nothing else changes. Calls time out after 20 seconds, and any failure falls back to the rule-based logic.
-
-### 1. Natural-language entry (`/ai/parse-expense`)
-- The model gets your category names, today's date and strict instructions to return one JSON object (type, amount, category, description, date, paymentMethod).
-- The reply is validated with zod. The category must be one of **your** categories (otherwise "Other"); the date must be within 5 years of today (otherwise today).
-- If there is no amount in the text, the API answers 422 with a helpful example.
-- On the Add Transaction page the result **pre-fills the form**; nothing is saved until you press Save, and you can change the category and every other field.
-
-### 2. Automatic categorisation (`/ai/categorize`)
-The "Auto-categorize" button next to the description suggests a type and category. It only changes the form fields; you confirm by saving.
-
-### 3 and 4. Insights and saving suggestions
-1. The server computes **facts** with MongoDB aggregations: top category, expenses this month vs last month, categories well above your usual monthly average, unusual expenses, budget status, recurring cost estimate, savings rate.
-2. The facts are sent to the model, which is told to use only those names and numbers, never to invent figures, never to give investment, tax, legal or credit advice, never to suggest skipping essential bills or borrowing, and to return a short JSON list.
-3. If the AI is unavailable, the same facts are turned into text by built-in rules.
-4. Results are cached per user for 5 minutes; the refresh button bypasses the cache.
-5. With fewer than 3 transactions (or none in the last two months) you get a "Not enough data yet" message and no AI call is made.
-
-Labels shown in the UI: **"AI-generated"** when the model wrote it, **"Auto-generated from your data"** for rule-based output, plus a disclaimer that it is general budgeting guidance, not financial advice.
-
-### Rule-based fallback (no API key)
-- Amounts: `500`, `1,250`, `₹500`, `Rs. 500`, `INR 500`, `$20`, `5k`, `2 lakh`.
-- Dates: today, tonight, yesterday, day before yesterday, `N days ago`, last week, `YYYY-MM-DD`.
-- Type: income words (salary, received, earned, credited, bonus, refund, dividend, freelance, "paid me"...) otherwise expense.
-- Category: keyword lists (pizza, uber, rent, electricity, netflix, ...) mapped to your categories, otherwise "Other".
-- Payment method: UPI/GPay/PhonePe/Paytm, credit card, debit card, net banking, bank transfer/NEFT/IMPS, cash.
-
-Example: `Bought groceries from supermarket for ₹1,250` becomes Expense, 1250, Food, "Groceries from supermarket", today.
-
-### Privacy note
-When an AI key is set, the text you type (and, for insights, aggregated numbers plus short descriptions of your largest unusual expenses) is sent to the AI provider. Leave `AI_API_KEY` empty if you do not want that.
-
----
-
 ## 15. Frontend in detail
 
 ### Routes
@@ -768,260 +740,3 @@ When an AI key is set, the text you type (and, for insights, aggregated numbers 
 
 Pages are lazy-loaded, so charts are only downloaded when needed.
 
-### Dashboard sections
-Stat cards (total balance, total income, total expenses, savings this month, number of transactions), highlights, income vs expenses (6 months), expenses by category, monthly expense trend, budget progress, insights panel (insights and saving tips), recent transactions, upcoming recurring transactions. Each section has its own skeleton while loading.
-
-### Context and hooks
-| Name | Purpose |
-|---|---|
-| `AuthContext` / `useAuth` | current user, login, register, logout, `updateUser`; checks `/auth/me` on load |
-| `ThemeContext` / `useTheme` | light/dark theme; saved in `localStorage` and, when logged in, in your settings |
-| `CategoryContext` / `useCategories` | the user's categories, `byType(type)`, `refresh()` |
-| `useFetch(fetcher, deps, { enabled })` | `{ data, loading, error, reload }` with cancellation on unmount |
-| `useDebounce` | debounced search input |
-| `useCurrency` | `fmt`, `compact` formatters using the user's currency |
-
-### API layer
-`src/api/client.js` creates one Axios instance (`baseURL: "/api"`, `withCredentials: true`). A response interceptor returns the `{ success, message, data }` envelope and, on a 401 from a protected call, logs the user out in the UI. Errors are turned into friendly messages by `utils/errors.js`.
-
-### Components (each has a matching `.css`)
-`Modal`, `ConfirmDialog`, `SkeletonLoader`, `EmptyState`, `ProgressBar`, `StatCard`, `PageHeader`, `Pagination`, `Avatar`, `ThemeToggle`, `NotificationBell`, `Sidebar`, `Topbar`, `FilterBar`, `TransactionTable`, `TransactionForm`, `AIExpenseInput`, `DonutChart`, `IncomeExpenseChart`, `TrendChart`, `BudgetCard`, `BudgetForm`, `CategoryForm`, `RecurringForm`, `InsightsPanel`, `RecentTransactions`, `UpcomingRecurring`, `BudgetProgress`, plus the `ProtectedRoute`/`PublicRoute` guards.
-
-### Theming
-Colours are CSS variables in `src/css/variables.css`; dark mode overrides them under `:root[data-theme="dark"]`. Shared utility classes (`.btn`, `.card`, `.input`, `.badge`, `.field`...) live in `src/css/global.css`; everything else is in the component's own CSS file. Charts read the same variables so they follow the theme.
-
-### Responsive behaviour
-- Under 900 px the sidebar becomes a slide-in drawer opened from the top bar.
-- Under 800 px two- and three-column grids collapse to one column.
-- Under 760 px the transactions table turns into stacked cards.
-
-### Error and loading handling
-Every data-dependent page shows a skeleton while loading, an inline error with a **Retry** button if the request fails, and an empty state with a call to action when there is no data. Form errors are shown next to the field, and server errors appear as toasts.
-
----
-
-## 16. Security
-
-| Area | What is done |
-|---|---|
-| Passwords | bcrypt (cost 12), 8-72 characters with a letter and a number; never returned by the API |
-| Sessions | JWT in an httpOnly cookie, `SameSite=Lax`, `Secure` in production; 7-day lifetime; logout clears it |
-| Authorization | `protect` middleware on every private route; every query is scoped to the token's user id; other users' records return 404 |
-| Login | identical error for unknown email and wrong password (no account enumeration); auth endpoints are rate limited |
-| Validation | zod on every body and query string; ObjectId format checked on `:id` params |
-| Injection | `express-mongo-sanitize` strips `$` and `.` operators; search text is regex-escaped |
-| HTTP hardening | `helmet` headers; CORS limited to `CLIENT_URL` with credentials; 10 KB body limit |
-| Rate limits | 1,500 requests / 15 min per IP overall; 30 failed attempts / 15 min on login, register and password change; 20 / minute on AI routes |
-| Uploads | allow-list of JPG/PNG/WebP, 2 MB, extension taken from the verified mime type, random name, old file removed |
-| Exports | CSV cells starting with `= + - @` are escaped (formula injection) |
-| Errors | one central handler; stack traces and internal messages are hidden in production |
-| Secrets | everything in environment variables; `.env` is git-ignored; server refuses to start in production without `JWT_SECRET` |
-| AI | only validated, structured output is used; prompts forbid risky financial advice; insights never contain model-invented numbers |
-
-Because authentication uses cookies, keep the frontend and API on the same site (see deployment). If you ever host them on different sites, add CSRF protection.
-
----
-
-## 17. Deployment
-
-The frontend calls the **relative** path `/api`, so in production the browser must reach both the frontend and the API on the same origin (or the same site). The simplest setup is a reverse proxy.
-
-### Option A: single server with a reverse proxy (Nginx example)
-```nginx
-server {
-  listen 80;
-  server_name example.com;
-
-  root /var/www/expense-tracker/frontend/dist;
-  index index.html;
-
-  location /api/     { proxy_pass http://127.0.0.1:5000; }
-  location /uploads/ { proxy_pass http://127.0.0.1:5000; }
-  location /         { try_files $uri /index.html; }   # single-page app routing
-}
-```
-Steps:
-1. `cd frontend && npm run build` and publish `dist/`.
-2. On the server: `cd backend && npm install --omit=dev`, set the environment variables (`NODE_ENV=production`, `MONGO_URI`, `JWT_SECRET`, `CLIENT_URL=https://example.com`), then run `npm start` under a process manager such as PM2.
-3. Serve everything over **HTTPS** (needed for Secure cookies).
-
-### Option B: static frontend host with rewrites
-Host `frontend/dist` on Vercel or Netlify and rewrite `/api/*` and `/uploads/*` to your backend URL. Vercel `vercel.json`:
-```json
-{
-  "rewrites": [
-    { "source": "/api/:path*",     "destination": "https://YOUR-BACKEND-HOST/api/:path*" },
-    { "source": "/uploads/:path*", "destination": "https://YOUR-BACKEND-HOST/uploads/:path*" },
-    { "source": "/(.*)",           "destination": "/index.html" }
-  ]
-}
-```
-Netlify `_redirects` (in `frontend/public`):
-```
-/api/*      https://YOUR-BACKEND-HOST/api/:splat      200
-/uploads/*  https://YOUR-BACKEND-HOST/uploads/:splat  200
-/*          /index.html                                200
-```
-With rewrites the browser only talks to the frontend domain, so cookies stay first-party and `COOKIE_SAMESITE=lax` works.
-
-### Backend hosting notes (Render, Railway, etc.)
-- Start command: `npm start`; build command: `npm install`.
-- Set `NODE_ENV=production`, `MONGO_URI`, `JWT_SECRET`, `CLIENT_URL`, optional AI variables.
-- In MongoDB Atlas **Network Access**, allow your host's outbound IPs (or `0.0.0.0/0` for simple hosts).
-- Free hosts may sleep when idle; the first request after a pause is slow.
-- Avatars are saved to local disk. On hosts with ephemeral disks they disappear on redeploy; switch to cloud storage for production.
-- The scheduler runs inside the API process, so keep one instance running. Missed recurring items are caught up on the next start or visit.
-
-### Production checklist
-- [ ] `NODE_ENV=production` and a strong `JWT_SECRET`
-- [ ] HTTPS enabled
-- [ ] Atlas password rotated, IP allow-list reviewed (no `0.0.0.0/0` unless required)
-- [ ] `CLIENT_URL` matches the public frontend URL
-- [ ] `.env` is not in Git
-- [ ] Backups enabled for the database
-
----
-
-## 18. Troubleshooting
-
-| Symptom | Cause | Fix |
-|---|---|---|
-| `Cannot find module 'helmet'` (or `zod`, `bcryptjs`, ...) | Backend packages not installed | `cd backend && npm install`; verify with `npm ls helmet zod bcryptjs` |
-| Frontend: `Failed to resolve import "react-router-dom"` (or axios, recharts...) | Frontend packages not installed | `cd frontend && npm install` |
-| `WARNING: JWT_SECRET is not set` | Only a warning in development | Add `JWT_SECRET` to `backend/.env`; generate with `node -e "console.log(require('crypto').randomBytes(48).toString('hex'))"` |
-| `Missing required environment variable: MONGO_URI` | `.env` missing, misnamed or in the wrong folder | It must be named exactly `.env` and sit inside `backend/` next to `server.js`. On Windows check that it is not `.env.txt` |
-| `Failed to start server: Could not connect to any servers in your MongoDB Atlas cluster` | Your IP is not allowed | Atlas -> Network Access -> Add Current IP -> wait until Active -> restart the backend (`Ctrl+C`, `npm run dev`) |
-| Same Atlas error after adding the IP | Cluster paused, IP changed, VPN, or a network that blocks Atlas | Resume the cluster, add the new IP, turn off VPN, try a mobile hotspot |
-| `bad auth` / `Authentication failed` | Wrong username or password in `MONGO_URI` | Reset the password in Database Access (letters and numbers only) and update `.env` |
-| `querySrv ENOTFOUND` / `querySrv ECONNREFUSED` | DNS or network blocks `mongodb+srv` | Try another network, or use Atlas's standard (non-SRV) connection string |
-| `connect ECONNREFUSED 127.0.0.1:27017` | Local MongoDB is not running | Start the MongoDB service (section 7, option B) |
-| `The uri parameter ... must be a string, got "undefined"` | `MONGO_URI` not loaded | Check the file name, location and variable name (`MONGO_URI`, not `MONGODB_URI`) |
-| Browser shows `ERR_CONNECTION_REFUSED` for `localhost:5000`, or the console shows 500 errors from `:5173/api/...` | Backend is not running | Start it with `npm run dev` in `backend/` and read its terminal for the real error |
-| `EADDRINUSE: address already in use :::5000` | Port 5000 is taken (on macOS, AirPlay uses it) | Set `PORT=5001` in `.env` and change the proxy target in `frontend/vite.config.js` to `http://localhost:5001`, then restart both |
-| Logged out immediately or after each restart | `JWT_SECRET` not set in development | Set a fixed `JWT_SECRET` |
-| Login works but the next request is 401 | Cookie not being stored or sent | Use `http://localhost:5173` consistently, keep using the Vite proxy, check that browser settings do not block cookies; in production use HTTPS and the same site |
-| `CORS error` | Calling the API directly from another origin | Use the Vite proxy in development, or set `CLIENT_URL` to the exact frontend origin |
-| `429 Too many requests` | Rate limit hit | Wait a few minutes; repeated failed logins are limited to 30 per 15 minutes |
-| `Route not found: GET /api/...` | Wrong URL or the old backend is still running | Restart the backend and check the path against section 13 |
-| Validation message like "Category X does not exist for expense" | Category name does not match one of your categories | Pick a category from the dropdown; names are matched ignoring case |
-| Profile picture does not appear | `/uploads` not proxied, or the image failed to upload | Restart the Vite dev server after changing `vite.config.js`; use JPG/PNG/WebP under 2 MB |
-| AI results always say "Auto-generated" | No valid AI key, or the provider call failed | Set a valid `AI_API_KEY` (real keys start with `sk-ant-`); the backend logs "AI ... failed, using rule-based" with the reason |
-| Charts are empty | No data in the selected period | Add transactions, or change the period |
-| A date appears one day off | You compared against local time | Dates are UTC calendar days by design; pick the date you want and it is stored as that day |
-| Recurring item did not create a transaction | `nextDate` is in the future | Items are created on their due date; set the start date to today to test |
-| PDF shows `INR` instead of the rupee symbol | PDF fonts cannot draw the symbol | Expected; CSV and the preview use the symbol |
-| `node --watch` not recognised | Node older than 18.11 | Update Node, or install `nodemon` and change the `dev` script |
-| Strange install errors on Windows | Project inside OneDrive | Move the project outside OneDrive or pause syncing, delete `node_modules`, run `npm install` again |
-| `npm install` warnings about vulnerabilities or deprecated packages | Normal for npm | Safe to ignore for local development; `npm audit` shows details |
-
-When asking for help, share only the **first error line** and never your connection string, password, JWT secret or API key.
-
----
-
-## 19. Manual test checklist
-
-**Auth**
-- [ ] Register with mismatched passwords shows an error; valid details log you in
-- [ ] Duplicate email shows "An account with this email already exists"
-- [ ] Wrong password shows "Invalid email or password"
-- [ ] Refreshing the page keeps you logged in; Logout returns you to login
-- [ ] Opening `/dashboard` while logged out redirects to `/login`
-
-**Transactions**
-- [ ] Add, edit and delete an expense and an income
-- [ ] Search, each filter, sorting and pagination work and combine
-- [ ] Empty state appears for a filter with no results
-
-**Categories**
-- [ ] Create, rename and delete a custom category; its transactions move to "Other" on delete
-- [ ] "Other" cannot be renamed or deleted
-
-**Budgets and notifications**
-- [ ] Budget of 1,000 for Food; expenses of 760, 140 and 110 trigger the 75%, 90% and exceeded alerts
-- [ ] Editing the budget amount clears and re-evaluates alerts
-- [ ] Turning "Budget alerts" off in Settings stops new budget notifications
-
-**Recurring**
-- [ ] A monthly item starting today creates a transaction immediately
-- [ ] Pause, resume, edit and delete work
-
-**Analytics and reports**
-- [ ] Monthly, yearly and custom range change all charts
-- [ ] Every report type previews; CSV opens in Excel; PDF downloads
-
-**AI**
-- [ ] `I spent 500 on dinner yesterday` pre-fills Expense, 500, Food, Dinner, yesterday
-- [ ] `Received salary 50000 today` pre-fills Income, Salary
-- [ ] Text without a number shows a helpful error
-- [ ] Insights panel shows a label and disclaimer
-
-**UI**
-- [ ] Dark mode persists after refresh
-- [ ] Mobile width (about 380 px): drawer menu, stacked table cards, no horizontal page scroll
-
----
-
-## 20. Known limitations
-
-- **Not yet covered by automated tests.** The code was syntax-checked and the parsing and date logic exercised, but there are no unit or integration tests in the repository yet.
-- The frontend uses a relative `/api` URL, so production needs a reverse proxy or rewrites (section 17).
-- Avatars are stored on local disk.
-- Insights caching is in memory (single server process).
-- Display currency changes do not convert stored amounts.
-- Past start dates on recurring items do not back-fill earlier occurrences.
-- "Current month" uses the server's UTC date.
-- Notifications are in-app only (no email or push).
-- Reports are capped at 5,000 transaction rows; the on-screen preview shows the first 200.
-- No password reset by email, no email verification, no two-factor authentication.
-
----
-
-## 21. Future improvements
-
-Automated tests (Jest + Supertest, React Testing Library), bank and UPI statement import (CSV/PDF), receipt scanning (OCR), multi-currency conversion, shared and group expenses, savings goals, email notifications, password reset by email, refresh tokens, Docker and CI, cloud storage for avatars, Redis cache, and an Express route that serves the built frontend.
-
----
-
-## 22. Git workflow and commit strategy
-
-### First-time setup
-```bash
-git init
-git add .
-git status          # confirm .env and node_modules are NOT listed
-git commit -m "chore: initial project"
-```
-If `.env` was ever committed: `git rm --cached backend/.env`, commit, and **rotate every secret** that was in it.
-
-### Branches
-`main` (always working), plus short-lived branches such as `feat/budgets`, `fix/login-redirect`, `docs/readme`.
-
-### Commit messages (Conventional Commits)
-`type(scope): short summary`, with types `feat`, `fix`, `refactor`, `docs`, `style`, `test`, `chore`.
-
-Suggested history for this project:
-```
-chore: scaffold backend and frontend projects
-chore(backend): config, error handling and response helpers
-feat(auth): register, login, logout and JWT cookie middleware
-feat(auth-ui): login and register pages with protected routes
-feat(transactions): CRUD API with search, filters and pagination
-feat(ui): app layout, theme tokens and transactions pages
-feat(categories): default categories and category management
-feat(budgets): monthly budgets with progress and alerts
-feat(notifications): notification service, bell and page
-feat(recurring): recurring rules, scheduler and lazy sync
-feat(analytics): aggregation endpoints and charts
-feat(dashboard): summary cards and dashboard sections
-feat(ai): provider layer, natural-language entry, categorisation
-feat(ai): insights and saving suggestions with rule-based fallback
-feat(reports): report preview, CSV and PDF export
-feat(profile): profile, avatar upload and settings
-fix(...): bug fixes
-docs: README and API documentation
-```
-Keep each commit small and focused, and never commit `.env`, `node_modules`, `uploads/` or `dist/`.
-
----
-
-*Built as a portfolio project: React, Node.js, Express, MongoDB, JWT authentication, REST design, aggregation pipelines, validation, security hardening, charts, reports and AI integration.*
