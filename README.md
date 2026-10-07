@@ -219,7 +219,7 @@ expense-tracker/
 │   │   ├── reportService.js       <- report data, CSV and PDF
 │   │   └── ai/
 │   │       ├── index.js           <- chooses the provider, extracts JSON from replies
-│   │       ├── claudeProvider.js  <- Anthropic API call
+│   │       ├── Provider.js        <- Anthropic API call
 │   │       └── ruleBasedParser.js <- no-API-key text parser and classifier
 │   ├── utils/                     <- ApiError, asyncHandler, response helper, dates,
 │   │                                 money, token (cookie), regex escape, TTL cache
@@ -354,7 +354,7 @@ JWT_SECRET=put_a_long_random_string_here
 JWT_EXPIRES_IN=7d
 COOKIE_SAMESITE=lax
 AI_API_KEY=
-AI_MODEL=claude-haiku-4-5-20251001
+
 ```
 
 ---
