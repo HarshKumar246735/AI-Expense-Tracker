@@ -1,0 +1,8 @@
+.upcoming-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.upcoming-head h3 { margin: 0; }
+.upcoming-list { list-style: none; }
+.upcoming-list li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--border); }
+.upcoming-list li:last-child { border-bottom: none; }
+.upcoming-list li > div { display: flex; flex-direction: column; }
+.upcoming-list li > div span { font-size: 12px; text-transform: capitalize; }
+.upcoming-list li > span { font-weight: 700; white-space: nowrap; }

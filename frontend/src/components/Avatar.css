@@ -1,0 +1,2 @@
+.avatar { border-radius: 50%; object-fit: cover; flex-shrink: 0; display: inline-block; }
+.avatar-initials { background: var(--primary); color: var(--on-primary); font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }

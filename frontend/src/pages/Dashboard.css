@@ -1,0 +1,4 @@
+.dashboard { display: flex; flex-direction: column; gap: 20px; }
+.dashboard .page-header { margin-bottom: 0; }
+.dash-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+.dash-highlights { list-style: none; display: flex; flex-direction: column; gap: 6px; padding: 14px 18px; font-size: 14px; border-left: 4px solid var(--primary); }

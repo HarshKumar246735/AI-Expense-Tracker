@@ -1,0 +1,6 @@
+.budget-card { display: flex; flex-direction: column; gap: 10px; }
+.budget-head { display: flex; align-items: center; justify-content: space-between; }
+.budget-head h3 { margin: 0; }
+.budget-amounts { font-size: 18px; }
+.budget-foot { display: flex; justify-content: space-between; font-size: 13px; }
+.budget-flag { align-self: flex-start; }

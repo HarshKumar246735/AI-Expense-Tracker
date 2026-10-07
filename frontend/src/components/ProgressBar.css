@@ -1,0 +1,4 @@
+.progress { height: 10px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border); overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 999px; background: var(--success); transition: width 0.4s ease; }
+.progress-warning .progress-fill { background: var(--warning); }
+.progress-critical .progress-fill, .progress-exceeded .progress-fill { background: var(--danger); }

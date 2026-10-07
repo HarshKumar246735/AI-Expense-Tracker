@@ -1,0 +1,7 @@
+.budgets-month { width: auto; }
+.budgets-summary { display: grid; grid-template-columns: repeat(3, auto) 1fr; gap: 24px; align-items: center; }
+.budgets-summary > div { display: flex; flex-direction: column; gap: 2px; }
+.budgets-summary strong { font-size: 20px; }
+.budgets-summary-bar { gap: 6px; min-width: 200px; }
+.budgets-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+@media (max-width: 800px) { .budgets-summary { grid-template-columns: 1fr 1fr; } .budgets-summary-bar { grid-column: 1 / -1; } }

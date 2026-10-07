@@ -1,0 +1,6 @@
+.app-main { margin-left: var(--sidebar-w); min-height: 100vh; display: flex; flex-direction: column; }
+.app-content { padding: 24px; max-width: 1280px; width: 100%; margin: 0 auto; flex: 1; }
+@media (max-width: 900px) {
+  .app-main { margin-left: 0; }
+  .app-content { padding: 16px 14px 28px; }
+}

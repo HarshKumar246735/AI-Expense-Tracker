@@ -1,0 +1,11 @@
+.rec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 18px; }
+.rec-card { display: flex; flex-direction: column; gap: 10px; }
+.rec-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.rec-top h3 { margin: 0; font-size: 16px; }
+.rec-sub { font-size: 13px; text-transform: capitalize; }
+.rec-amount { font-size: 22px; font-weight: 700; }
+.rec-dates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; font-size: 13px; }
+.rec-dates dt { color: var(--text-muted); font-size: 12px; }
+.rec-dates dd { font-weight: 600; }
+.rec-actions { display: flex; align-items: center; gap: 4px; margin-top: 4px; }
+.rec-actions .btn-sm { margin-right: auto; }

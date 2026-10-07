@@ -1,0 +1,4 @@
+.profile-page { max-width: 760px; }
+.profile-avatar-card { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.profile-avatar-card h3 { margin: 0 0 2px; }
+.profile-avatar-card p { margin-bottom: 10px; }

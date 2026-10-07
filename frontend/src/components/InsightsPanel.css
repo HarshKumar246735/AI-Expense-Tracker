@@ -1,0 +1,14 @@
+.insights-head { display: flex; align-items: center; justify-content: space-between; }
+.insights-head h3 { display: flex; align-items: center; gap: 8px; color: var(--primary); margin: 0; }
+.insights-tabs { display: flex; gap: 6px; margin: 12px 0; }
+.insights-tabs button { background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 4px 14px; font-size: 13px; color: var(--text-muted); }
+.insights-tabs button.active { background: var(--primary-soft); color: var(--primary); border-color: var(--primary); font-weight: 600; }
+.insights-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.insight { display: flex; gap: 12px; padding: 10px 12px; border-radius: 10px; background: var(--surface-2); border-left: 3px solid var(--border); }
+.insight svg { flex-shrink: 0; margin-top: 2px; }
+.insight p { font-size: 14px; color: var(--text-muted); }
+.insight-positive { border-left-color: var(--success); } .insight-positive svg { color: var(--success); }
+.insight-warning { border-left-color: var(--warning); } .insight-warning svg { color: var(--warning); }
+.insight-neutral svg { color: var(--primary); }
+.insights-foot { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; margin-top: 14px; font-size: 12px; }
+.insights-spin { animation: spin 0.8s linear infinite; }

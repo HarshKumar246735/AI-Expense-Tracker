@@ -1,0 +1,10 @@
+.stat-card { display: flex; align-items: center; gap: 14px; padding: 18px; }
+.stat-icon { width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.stat-primary { background: var(--primary-soft); color: var(--primary); }
+.stat-success { background: var(--success-soft); color: var(--success); }
+.stat-danger { background: var(--danger-soft); color: var(--danger); }
+.stat-warning { background: var(--warning-soft); color: var(--warning); }
+.stat-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.stat-label { font-size: 13px; color: var(--text-muted); }
+.stat-value { font-size: 22px; overflow-wrap: anywhere; }
+.stat-sub { font-size: 12px; color: var(--text-muted); }

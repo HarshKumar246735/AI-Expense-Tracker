@@ -1,0 +1,7 @@
+.txn-type { display: inline-flex; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 18px; }
+.txn-type-btn { padding: 8px 22px; border: none; background: var(--surface); color: var(--text-muted); font-weight: 600; }
+.txn-type-btn.active.txn-type-expense { background: var(--danger-soft); color: var(--danger); }
+.txn-type-btn.active.txn-type-income { background: var(--success-soft); color: var(--success); }
+.txn-desc-row { display: flex; gap: 8px; }
+.txn-desc-row .btn { white-space: nowrap; }
+@media (max-width: 520px) { .txn-desc-row { flex-direction: column; } }

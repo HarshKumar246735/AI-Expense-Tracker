@@ -1,0 +1,9 @@
+.analytics-controls { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: 14px 18px; }
+.analytics-tabs { display: inline-flex; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.analytics-tabs button { background: var(--surface); border: none; padding: 8px 16px; color: var(--text-muted); font-weight: 600; }
+.analytics-tabs button.active { background: var(--primary-soft); color: var(--primary); }
+.analytics-input { width: auto; }
+.analytics-range { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.analytics-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.analytics-highlights ul { list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.analytics-highlights h3 { margin-bottom: 10px; }

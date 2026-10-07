@@ -1,0 +1,24 @@
+.topbar {
+  position: sticky; top: 0; z-index: 40; display: flex; align-items: center; gap: 10px; padding: 10px 24px;
+  background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.topbar-spacer { flex: 1; }
+.topbar-menu { display: none; }
+.topbar-user { position: relative; }
+.topbar-user-btn { display: flex; align-items: center; gap: 9px; background: transparent; border: none; padding: 3px 6px; border-radius: 999px; }
+.topbar-user-btn:hover { background: var(--surface-2); }
+.topbar-name { font-weight: 600; font-size: 14px; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.topbar-menu-pop { position: absolute; right: 0; top: calc(100% + 8px); min-width: 210px; padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.topbar-email { font-size: 12px; padding: 6px 10px; overflow: hidden; text-overflow: ellipsis; }
+.topbar-menu-pop a, .topbar-menu-pop button {
+  display: flex; align-items: center; gap: 9px; padding: 8px 10px; border-radius: 8px; background: transparent; border: none; color: var(--text); text-align: left; text-decoration: none; width: 100%;
+}
+.topbar-menu-pop a:hover, .topbar-menu-pop button:hover { background: var(--surface-2); text-decoration: none; }
+
+@media (max-width: 900px) {
+  .topbar { padding: 10px 14px; }
+  .topbar-menu { display: inline-flex; }
+}
+@media (max-width: 560px) {
+  .topbar-name, .topbar-add span { display: none; }
+}

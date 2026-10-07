@@ -1,0 +1,2 @@
+.txn-totals { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 14px; margin-bottom: 14px; }
+.txn-loading { opacity: 0.55; transition: opacity 0.15s; pointer-events: none; }

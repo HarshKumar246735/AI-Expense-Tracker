@@ -1,0 +1,10 @@
+.settings-page { max-width: 760px; }
+.settings-theme { display: flex; gap: 10px; }
+.settings-theme-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text-muted); font-weight: 600; }
+.settings-theme-btn.active { border-color: var(--primary); background: var(--primary-soft); color: var(--primary); }
+.settings-currency { max-width: 360px; }
+.settings-prefs { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.settings-prefs label { display: flex; gap: 12px; align-items: flex-start; cursor: pointer; }
+.settings-prefs input { margin-top: 4px; width: 17px; height: 17px; }
+.settings-prefs span { display: flex; flex-direction: column; }
+.settings-prefs small { font-size: 13px; }

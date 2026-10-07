@@ -1,0 +1,9 @@
+.cat-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.cat-head h3 { margin: 0; }
+.cat-list { list-style: none; }
+.cat-list li { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); }
+.cat-list li:last-child { border-bottom: none; }
+.cat-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.cat-name { flex: 1; font-weight: 500; overflow: hidden; text-overflow: ellipsis; }
+.cat-actions { display: flex; }
+.cat-actions .btn-icon:disabled { opacity: 0.3; cursor: not-allowed; }

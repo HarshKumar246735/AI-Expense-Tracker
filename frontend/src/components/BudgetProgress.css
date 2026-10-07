@@ -1,0 +1,4 @@
+.bp-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.bp-head h3 { margin: 0; }
+.bp-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.bp-row { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; margin-bottom: 6px; }
